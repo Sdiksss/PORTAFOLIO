@@ -1,0 +1,90 @@
+:root {
+  box-sizing: border-box;
+  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  --text-ligth: 200;
+  --text-medium: 400;
+  --text-bold: 600;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.body--ligth {
+  --bg: #e6f9ffd5;
+  --bg-secondary: white;
+  --text: #222;
+
+  --morph1: #f7b2b3;
+  --morph2: #2fa7f7;
+}
+
+.body--dark {
+  --bg: #002a47;
+  --bg-secondary: black;
+  --text: #f0f0f0;
+
+  --morph1: rgb(0, 25, 211);
+  --morph2: #ff0000;
+}
+
+.body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  max-width: 100%;
+  --white: #f0f0f0;
+  height: auto;
+  position: relative;
+}
+
+/* barra de scroll */
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+::-webkit-scrollbar-button:increment,
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--bg);
+}
+
+/* selection */
+
+::selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+#progress {
+  height: 2px;
+  background-color: var(--text);
+  position: fixed;
+  top: 6vh;
+  left: 0;
+  z-index: 10;
+}
